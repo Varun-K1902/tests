@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const todoList = require("../index");
+const todoList = require("../todo");
 let today = new Date().toLocaleDateString("en-CA");
 
 const { all, markAsComplete, add, overdue, dueToday, dueLater } = todoList();
