@@ -7,8 +7,8 @@ const { all, markAsComplete, add, overdue, dueToday, dueLater } = todoList();
 describe("Todolist Testing", () => {
   beforeAll(() => {
     add({
-      title: "DAA algorithums",
-      completed: false,
+      title: "work",
+      completed: true,
       dueDate: new Date().toLocaleDateString("en-CA"),
     });
   });
@@ -19,7 +19,7 @@ describe("Todolist Testing", () => {
     let length = all.length;
 
     add({
-      title: "node js learning",
+      title: "assignments",
       completed: false,
       dueDate: new Date().toLocaleDateString("en-CA"),
     });
@@ -27,7 +27,7 @@ describe("Todolist Testing", () => {
     expect(all.length).toBe(length + 1);
   });
 
-  test("Mark todo as a completed", () => {
+  test("Mark todo as completed", () => {
     expect(all[0].completed).toBe(false);
     markAsComplete(0);
     expect(all[0].completed).toBe(true);
